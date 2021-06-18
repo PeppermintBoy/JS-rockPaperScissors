@@ -1,3 +1,6 @@
+let userRoundInput = prompt('how many rounds y\'all want?').parseInt;
+
+
 
 //Pick random hand for the computer//
 
@@ -10,60 +13,119 @@ console.log(computerPlay());
 
 //play one round. compare the result. announce the result. user input automatically becomes case INsensetive//
 
-function playRound(playerSection, computerSection) {
+
+function playRound() {
+    let winCondition;
     const playerSelection = prompt('Rock, Paper or Scissors? Input your answer.').toLowerCase();
     const computerSelection = computerPlay() ;
     //user input = Rock//
     if (playerSelection === 'rock') {
         if (computerSelection === 'scissors') {
-        
-            return alert('you win. You:Rock Computer:Scissors');
+            console.log('you win. You:Rock Computer:Scissors');
+
+            winCondition = 'player';
+            return winCondition;
 
         }
         else if (computerSelection === 'paper') {
-            return alert('you lost. You:Rock Computer:Paper');
+            console.log('you lost. You:Rock Computer:Paper');
+
+            winCondition = 'computer';
+            return winCondition;
         }
         else {
-            return alert('it is a tie. You:Rock Comouter:Rock');
+            console.log('it is a tie. You:Rock Comouter:Rock');
+
+            winCondition = 'tie';
+            return winCondition;
         }
 
     }
     //user input = Paper//
     else if (playerSelection === 'paper') {
         if (computerSelection === 'rock') {
-            return alert('You win. You:Paper Computer:Rock');
+            console.log('You win. You:Paper Computer:Rock');
+            winCondition = 'player';
+
+
+            return winCondition;
         }
         else if (computerSelection === 'scissors') {
-            return alert('you lost. You:Paper Computer:Scissors');
+            console.log('you lost. You:Paper Computer:Scissors');
+            winCondition = 'computer';
+
+            return winCondition;
         }
         else {
-            return alert('it is a tie. You:Paper Computer:Paper');
+            console.log('it is a tie. You:Paper Computer:Paper');
+            
+            winCondition = 'tie';
+
+            return winCondition;
         }
     }
     // user input = Scissors//
     else if (playerSelection === 'scissors') {
         if (computerSelection === 'paper') {
-            return alert('you win. You:Scissors Computer:Paper');
+            console.log('you win. You:Scissors Computer:Paper');
+            winCondition = 'player';
+            return winCondition;
         }
         else if (computerSelection === 'rock') {
-            return alert('you lost. You:Scissors Computer:Rock');
+            console.log('you lost. You:Scissors Computer:Rock');
+            winCondition = 'computer';
+
+            return winCondition;
         }
         else {
-            return alert('it\'s a tie. You:Paper Computer:Rock');
+            console.log('it\'s a tie. You:Paper Computer:Rock');
+            winCondition = 'tie';
+            return winCondition;
         }
     }
 }
-console.log(playRound());
 
-//play 5 rounds(repeat playRound() and computerPlay()). keep the scores. announce the winnder and loser at the end. //
+
+//play 5 rounds(repeat playRound() and computerPlay()). keep the scores in console.log(). announce the winnder and loser at the end. //
 
 function game() {
-    for(i = 0; i <5;  i++) {
-        computerPlay();
-        playRound();
+    let playerScore = 0, computerScore = 0;
+    const userRoundInput = parseInt(prompt('how many rounds y\'all want?'));
+    console.log(userRoundInput);
+    
+
+    for(i = 0; i < userRoundInput;  i++) {
+        let result = playRound();
+        if (result === 'player') {
+            playerScore += 1;
+            console.log('player score: ' + playerScore);
+
         }
 
+        else if (result === 'computer') {
+            computerScore += 1;
+            console.log('computer score: ' + computerScore);
+            
 
-    } 
+        }
+        
+    }
+    
+    if (playerScore > computerScore) {
+        console.log('You won');
+
+    }
+
+    else if (computerScore > playerScore) {
+        console.log('Computer won')
+    }
+
+    else {
+        console.log('tied.')
+    }
+    
+
+} 
+
 
 
