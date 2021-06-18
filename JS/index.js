@@ -1,6 +1,3 @@
-let userRoundInput = prompt('how many rounds y\'all want?').parseInt;
-
-
 
 //Pick random hand for the computer//
 
