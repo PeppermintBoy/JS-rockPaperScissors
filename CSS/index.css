@@ -1,13 +1,15 @@
 html {
-    background: url("/picutres/1vz919.jpeg");
+    background: url("/picutres/400999_47-free-simple-wallpaper-backgrounds-for-your-desktop_1920x1200_h.webp");
+    background-size: cover;
     color: white; 
 }
 
 h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: magenta;
     font-size: 50px;
     text-align: center;
-    text-shadow: 10px 10px 0.4rem green;
+    text-shadow: 10px 10px 0.4rem rgba(140, 0, 255, 0.966);
 }
 .choices {
     display: flex;
@@ -19,15 +21,72 @@ h1 {
 }
 
 .choice{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 25px;
     text-align: center;
     padding: 3rem;
     margin: 2rem;
     width: 10%;
     height: auto;
-    border: .4rem solid black;
-    border-radius: .5rem;
+    border-radius: 1rem;
+  
+}
+
+.scissors {
+    color: rgb(255, 178, 61);
+    background-color: rgba(0, 0, 0, 0.4);
+    text-shadow: 10px 10px 0.4rem rgba(255, 177, 61, 0.568);
+    box-shadow: 10px 10px 0.4rem rgb(255, 153, 0);
+    border: .4rem solid rgb(211, 190, 0);
+
+}
+
+.rock {
+    color: rgba(224, 1, 213, 1);
     background-color: rgba(0,0,0,0.4);
-    text-shadow: 10px 10px 0.4rem black;
-    box-shadow: 10px 10px 0.4rem black;
+    text-shadow: 10px 10px 0.4rem rgba(224, 1, 213, 0.534);
+    box-shadow: 10px 10px 0.4rem rgba(163, 0, 155, 0.932);
+    border: .4rem solid rgba(255, 60, 0, 0.932);
+
+}
+
+.paper {
+    color: turquoise;
+    background-color: rgba(0,0,0,0.4);
+    text-shadow: 10px 10px 0.4rem rgba(64, 224, 208, 0.514);
+    box-shadow: 10px 10px 0.4rem rgb(1, 134, 41);
+    border: .4rem solid rgb(30, 0, 165);
+}
+
+.profile-pic {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 0.3rem solid rgba(140, 0, 255, 0.548);
+
+}
+
+.score-board {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
+.score {
+    text-align: center;
+    margin: 4rem;
+}
+
+.computer-font, .computer-score {
+    text-shadow: 10px 10px 0.4rem rgba(226, 10, 10, 0.514);
+
+}
+
+.player-font, .player-score {
+    text-shadow: 10px 10px 0.4rem rgba(64, 224, 125, 0.514);
+
 }
