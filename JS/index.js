@@ -1,3 +1,17 @@
+//input your Name
+function inputName() {
+    alert('*phone is ringing.*');
+    let firstAnswer = prompt('Answer the call? YES/NO');
+    if (firstAnswer.toUpperCase() === 'YES') {
+        const userName = prompt('Stranger:"What is your name... sweetheart?"');
+        document.getElementById('player-font').innerHTML =userName;
+        return alert(`Hello ${userName}... Let's play a game of rock paper and scissors... By the way... I have locked you out in the phone booth...`);
+    }
+    else {
+        return alert('*phone keeps ringing');
+    }
+}
+
 
 //Pick random hand for the computer//
 
@@ -120,9 +134,6 @@ function game() {
     else {
         console.log('tied.')
     }
-    
-
 } 
 
-
-
+inputName();
