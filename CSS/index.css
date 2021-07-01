@@ -1,5 +1,5 @@
 html {
-    background: url("/picutres/400999_47-free-simple-wallpaper-backgrounds-for-your-desktop_1920x1200_h.webp");
+    background: url("/picutres/ezgif-6-5ab88d42118e.jpeg");
     background-size: cover;
     color: white; 
 }
@@ -16,8 +16,8 @@ h1 {
     flex: 1;
     align-items: center;
     justify-content: center;
-    font-size: 40px;
-    text-align: center;
+    font-size: 40px; 
+    text-align: center; 
 }
 
 .choice{

@@ -1,30 +1,25 @@
+
 //input your Name
-function inputName() {
+    function inputName() {
     alert('*phone is ringing.*');
     let firstAnswer = prompt('Answer the call? YES/NO');
     if (firstAnswer.toUpperCase() === 'YES') {
-        const userName = prompt('Stranger:"What is your name... sweetheart?"');
+        const userName = prompt('Stranger: "Hello... What is your name..."');
         document.getElementById('player-font').innerHTML =userName;
-        return alert(`Hello ${userName}... Let's play a game of rock paper and scissors... By the way... I have locked you out in the phone booth...`);
+        return alert(`Stranger: "Lovely name ${userName}... Let's play a game of rock paper and scissors... By the way... I have locked you out in the phone booth..."`);
+        }
+        else {
+            return alert('*phone keeps ringing');
+        }
     }
-    else {
-        return alert('*phone keeps ringing');
-    }
-}
-
-
 //Pick random hand for the computer//
-
-function computerPlay() {
+    function computerPlay() {
     const hands = ['rock', 'paper', 'scissors'];
     const randomIndex = hands[Math.floor(Math.random() * hands.length)];
     return randomIndex;
-} 
+    } 
 console.log(computerPlay());
-
 //play one round. compare the result. announce the result. user input automatically becomes case INsensetive//
-
-
 function playRound() {
     let winCondition;
     const playerSelection = prompt('Rock, Paper or Scissors? Input your answer.').toLowerCase();
@@ -137,3 +132,5 @@ function game() {
 } 
 
 inputName();
+
+
