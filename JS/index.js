@@ -19,13 +19,19 @@
     return randomIndex;
     } 
 console.log(computerPlay());
+
+function selectedPlayerHand(e) {
+    let playerScore = document.querySelector('.player-score');
+    let computerScore = document.querySelector('.compiter-score');
+    playRound(e);
+    console.log(e);
+}
 //play one round. compare the result. announce the result. user input automatically becomes case INsensetive//
-function playRound() {
+function playRound(e) {
     let winCondition;
-    const playerSelection = prompt('Rock, Paper or Scissors? Input your answer.').toLowerCase();
     const computerSelection = computerPlay() ;
     //user input = Rock//
-    if (playerSelection === 'rock') {
+    if (e === 'rock') {
         if (computerSelection === 'scissors') {
             console.log('you win. You:Rock Computer:Scissors');
             winCondition = 'player';
@@ -43,7 +49,7 @@ function playRound() {
         }
     }
     //user input = Paper//
-    else if (playerSelection === 'paper') {
+    else if (e === 'paper') {
         if (computerSelection === 'rock') {
             console.log('You win. You:Paper Computer:Rock');
             winCondition = 'player';
@@ -61,7 +67,7 @@ function playRound() {
         }
     }
     // user input = Scissors//
-    else if (playerSelection === 'scissors') {
+    else if (e === 'scissors') {
         if (computerSelection === 'paper') {
             console.log('you win. You:Scissors Computer:Paper');
             winCondition = 'player';
