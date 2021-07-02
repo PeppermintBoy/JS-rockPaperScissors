@@ -28,45 +28,35 @@ function playRound() {
     if (playerSelection === 'rock') {
         if (computerSelection === 'scissors') {
             console.log('you win. You:Rock Computer:Scissors');
-
             winCondition = 'player';
             return winCondition;
-
         }
         else if (computerSelection === 'paper') {
             console.log('you lost. You:Rock Computer:Paper');
-
             winCondition = 'computer';
             return winCondition;
         }
         else {
             console.log('it is a tie. You:Rock Comouter:Rock');
-
             winCondition = 'tie';
             return winCondition;
         }
-
     }
     //user input = Paper//
     else if (playerSelection === 'paper') {
         if (computerSelection === 'rock') {
             console.log('You win. You:Paper Computer:Rock');
             winCondition = 'player';
-
-
             return winCondition;
         }
         else if (computerSelection === 'scissors') {
             console.log('you lost. You:Paper Computer:Scissors');
             winCondition = 'computer';
-
             return winCondition;
         }
         else {
-            console.log('it is a tie. You:Paper Computer:Paper');
-            
+            console.log('it is a tie. You:Paper Computer:Paper');         
             winCondition = 'tie';
-
             return winCondition;
         }
     }
@@ -93,44 +83,33 @@ function playRound() {
 
 
 //play 5 rounds(repeat playRound() and computerPlay()). keep the scores in console.log(). announce the winnder and loser at the end. //
-
-function game() {
+//Disabled for now to work on DOM.
+/*function game() {
     let playerScore = 0, computerScore = 0;
     const userRoundInput = parseInt(prompt('how many rounds y\'all want?'));
     console.log(userRoundInput);
-    
-
     for(i = 0; i < userRoundInput;  i++) {
         let result = playRound();
         if (result === 'player') {
             playerScore += 1;
             console.log('player score: ' + playerScore);
-
         }
-
         else if (result === 'computer') {
             computerScore += 1;
             console.log('computer score: ' + computerScore);
-            
-
-        }
-        
-    }
-    
+        }    
+    } 
     if (playerScore > computerScore) {
         console.log('You won');
-
     }
-
     else if (computerScore > playerScore) {
         console.log('Computer won')
     }
-
     else {
         console.log('tied.')
     }
-} 
+}   */
 
-inputName();
+//inputName();
 
 
