@@ -1,5 +1,5 @@
 html {
-    background: url("/picutres/ezgif-6-5ab88d42118e.jpeg");
+    background: url("../picutres/ezgif-6-5ab88d42118e.jpeg");
     background-size: cover;
     color: white; 
 }
@@ -27,7 +27,7 @@ h1 {
     width: 13%;
     height: auto;
     border-radius: 1rem;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
   
 }
 

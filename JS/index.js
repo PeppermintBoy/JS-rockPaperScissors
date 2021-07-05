@@ -111,7 +111,7 @@ function reachedFivePoints() {
     }
 }
 
-//inputName();
+inputName();
 
 //Saving this code in legacy of help from Harrison (JUN2021)
 //play 5 rounds(repeat playRound() and computerPlay()). keep the scores in console.log(). announce the winnder and loser at the end.
