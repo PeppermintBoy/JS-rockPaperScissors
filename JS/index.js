@@ -1,3 +1,4 @@
+//global function. Functions can change the these variables.
 let playerWin = 0;
 let computerWin = 0;
 
@@ -21,16 +22,16 @@ function computerPlay() {
     const randomIndex = hands[Math.floor(Math.random() * hands.length)];
     return randomIndex;
 } 
-console.log(computerPlay());
 
-//player clicked on a hand.
+//player clicked on a hand and reflect the result on score board.
 function selectedPlayerHand(e) {
     const result = playRound(e);
+    reachedFivePoints();
     if (result === playerWin) {
-        return document.querySelector('.player-score').innerHTML = playerWin;
+        return document.querySelector('.player-score').textContent = playerWin;
     }
     else if (result === computerWin) {
-        return document.querySelector('.computer-score').innerHTML = computerWin;
+        return document.querySelector('.computer-score').textContent = computerWin;
     }
     else return;
 }
@@ -38,6 +39,8 @@ function selectedPlayerHand(e) {
 //play one round. compare the result. announce the result. user input automatically becomes case INsensetive
 function playRound(e) {
     const computerSelection = computerPlay() ;
+    console.log(playerWin);
+    console.log(computerWin);
     //user input = Rock
     if (e === 'rock') {
         if (computerSelection === 'scissors') {
@@ -85,8 +88,19 @@ function playRound(e) {
     }
 }
 
+function reachedFivePoints() {
+    if (playerWin === 5) {
+        alert('Stranger: "You win this time... come again."')
+    }
+    else if (computerWin === 5){
+        alert('Stranger: "I win... there is no escape.')
+    }
+}
 
-//play 5 rounds(repeat playRound() and computerPlay()). keep the scores in console.log(). announce the winnder and loser at the end. //
+inputName();
+
+//Saving this code in legacy of help from Harrison (JUN2021)
+//play 5 rounds(repeat playRound() and computerPlay()). keep the scores in console.log(). announce the winnder and loser at the end.
 /*function game(e) {
     let playerScore = 0, computerScore = 0;
     //const userRoundInput = parseInt(prompt('how many rounds y\'all want?'));
@@ -113,6 +127,6 @@ function playRound(e) {
     }
 } */
 
-//inputName();
+
 
 
