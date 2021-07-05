@@ -14,13 +14,13 @@
     <h1>Win against me or be trapped in the box. FOREVER <img class="profile-pic" src="/picutres/Nathan.jpeg" ></h1>
     
     <div class="choices">
-        <div class="choice scissors" onclick="selectedPlayerHand('scissors')">
+        <div  id="scissors"class="choice scissors" onclick="selectedPlayerHand('scissors'); clicked(this.id);">
             <span class="cell">SCISSORS </span>
         </div>
-        <div class="choice rock" onclick="selectedPlayerHand('rock')">
+        <div id="rock" class="choice rock" onclick="selectedPlayerHand('rock'); clicked(this.id);">
             <span class="cell">ROCK</span>
         </div>  
-        <div class="choice paper" onclick="selectedPlayerHand('paper')">
+        <div id="paper" class="choice paper" onclick="selectedPlayerHand('paper'); clicked(this.id);">
             <span class="cell">PAPER</span>
         </div>
     </div>

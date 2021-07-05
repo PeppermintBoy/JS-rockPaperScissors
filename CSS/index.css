@@ -27,6 +27,7 @@ h1 {
     width: 13%;
     height: auto;
     border-radius: 1rem;
+    transition: all 0.5s ease;
   
 }
 
@@ -87,4 +88,22 @@ h1 {
 .player-font, .player-score {
     text-shadow: 10px 10px 0.4rem rgba(64, 224, 125, 0.514);
 
+}
+
+.clicked-scissors {
+    transform: scale(1.1);
+    border-color: blue;
+    box-shadow: 10px 10px 0.4rem rgba(0, 0, 255, 0.5);
+}
+
+.clicked-rock {
+    transform: scale(1.1);
+    border-color: rgba(0, 240, 52, 0.753);
+    box-shadow: 10px 10px 0.4rem rgba(65, 150, 16, 0.541);
+}
+
+.clicked-paper {
+    transform: scale(1.1);
+    border-color: orange;
+    box-shadow: 10px 10px 0.4rem rgba(248, 170, 2, 0.548);
 }

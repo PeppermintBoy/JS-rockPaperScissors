@@ -16,6 +16,20 @@ function inputName() {
     }
 }
 
+//Change player choice box css when clicked
+function clicked(e) {
+    const hands = document.querySelectorAll('.choice');
+    const clickedHand = document.querySelector(`#${e}`);
+    if (e === 'scissors') clickedHand.classList.add('clicked-scissors');  
+    else if(e === 'rock') clickedHand.classList.add('clicked-rock');
+    else if(e === 'paper') clickedHand.classList.add('clicked-paper');
+    return hands.forEach(e => e.addEventListener('transitionend', transitionEnd));
+}
+function transitionEnd(e) {
+    if (e.propertyName !== 'transform') return;
+    this.classList.remove('clicked-scissors', 'clicked-rock', 'clicked-paper');
+}
+
 //Pick random hand for the computer
 function computerPlay() {
     const hands = ['rock', 'paper', 'scissors'];
@@ -97,7 +111,7 @@ function reachedFivePoints() {
     }
 }
 
-inputName();
+//inputName();
 
 //Saving this code in legacy of help from Harrison (JUN2021)
 //play 5 rounds(repeat playRound() and computerPlay()). keep the scores in console.log(). announce the winnder and loser at the end.
